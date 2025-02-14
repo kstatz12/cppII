@@ -26,4 +26,20 @@ vagrant up
 ```
 this command might time out. if it does, just re-run it and it should continue where it left off
 
+once your vm is started run 
+
+``` shell
+vagrant ssh-config
+```
+and copy paste the output
+
+then once you are ready move onto the visual studio code setup
+
+
+# Visual Studio code
+
+## Extensions
+[link](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+
+install the remote development extensions
 
