@@ -1,0 +1,9 @@
+#+title: CPP2 In Class Notes
+
+#+BEGIN_SRC c++
+std::vector<int> y {};
+y.reserve(5); //this reserves size to avoid resize suprises
+int wrong = y[10]; //UB, out of bounds
+int right = y.at(10); //will throw an exception
+y.push_back(10);
+#+END_SRC

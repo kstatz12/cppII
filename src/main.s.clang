@@ -1,0 +1,167 @@
+	.file	"main.cpp"
+	.text
+	.p2align 4
+	.type	_ZNSt17_Function_handlerIFivEZ4mainEUlvE_E9_M_invokeERKSt9_Any_data, @function
+_ZNSt17_Function_handlerIFivEZ4mainEUlvE_E9_M_invokeERKSt9_Any_data:
+.LFB1976:
+	.cfi_startproc
+	movq	(%rdi), %rdx
+	movq	8(%rdi), %rax
+	movl	(%rax), %eax
+	addl	(%rdx), %eax
+	ret
+	.cfi_endproc
+.LFE1976:
+	.size	_ZNSt17_Function_handlerIFivEZ4mainEUlvE_E9_M_invokeERKSt9_Any_data, .-_ZNSt17_Function_handlerIFivEZ4mainEUlvE_E9_M_invokeERKSt9_Any_data
+	.p2align 4
+	.type	_ZNSt17_Function_handlerIFivEZ4mainEUlvE_E10_M_managerERSt9_Any_dataRKS3_St18_Manager_operation, @function
+_ZNSt17_Function_handlerIFivEZ4mainEUlvE_E10_M_managerERSt9_Any_dataRKS3_St18_Manager_operation:
+.LFB1980:
+	.cfi_startproc
+	testl	%edx, %edx
+	je	.L4
+	cmpl	$1, %edx
+	jne	.L9
+	movq	%rsi, (%rdi)
+.L7:
+	xorl	%eax, %eax
+	ret
+	.p2align 4,,10
+	.p2align 3
+.L9:
+	cmpl	$2, %edx
+	jne	.L7
+	movdqu	(%rsi), %xmm0
+	movups	%xmm0, (%rdi)
+	jmp	.L7
+	.p2align 4,,10
+	.p2align 3
+.L4:
+	movq	$_ZTIZ4mainEUlvE_, (%rdi)
+	xorl	%eax, %eax
+	ret
+	.cfi_endproc
+.LFE1980:
+	.size	_ZNSt17_Function_handlerIFivEZ4mainEUlvE_E10_M_managerERSt9_Any_dataRKS3_St18_Manager_operation, .-_ZNSt17_Function_handlerIFivEZ4mainEUlvE_E10_M_managerERSt9_Any_dataRKS3_St18_Manager_operation
+	.section	.text._ZNSt14_Function_baseD2Ev,"axG",@progbits,_ZNSt14_Function_baseD5Ev,comdat
+	.align 2
+	.p2align 4
+	.weak	_ZNSt14_Function_baseD2Ev
+	.type	_ZNSt14_Function_baseD2Ev, @function
+_ZNSt14_Function_baseD2Ev:
+.LFB480:
+	.cfi_startproc
+	.cfi_personality 0x3,__gxx_personality_v0
+	.cfi_lsda 0x3,.LLSDA480
+	movq	16(%rdi), %rax
+	testq	%rax, %rax
+	je	.L16
+	subq	$8, %rsp
+	.cfi_def_cfa_offset 16
+	movl	$3, %edx
+	movq	%rdi, %rsi
+	call	*%rax
+	addq	$8, %rsp
+	.cfi_def_cfa_offset 8
+	ret
+	.p2align 4,,10
+	.p2align 3
+.L16:
+	ret
+	.cfi_endproc
+.LFE480:
+	.section	.gcc_except_table._ZNSt14_Function_baseD2Ev,"aG",@progbits,_ZNSt14_Function_baseD5Ev,comdat
+.LLSDA480:
+	.byte	0xff
+	.byte	0xff
+	.byte	0x1
+	.uleb128 .LLSDACSE480-.LLSDACSB480
+.LLSDACSB480:
+.LLSDACSE480:
+	.section	.text._ZNSt14_Function_baseD2Ev,"axG",@progbits,_ZNSt14_Function_baseD5Ev,comdat
+	.size	_ZNSt14_Function_baseD2Ev, .-_ZNSt14_Function_baseD2Ev
+	.weak	_ZNSt14_Function_baseD1Ev
+	.set	_ZNSt14_Function_baseD1Ev,_ZNSt14_Function_baseD2Ev
+	.section	.text.unlikely,"ax",@progbits
+.LCOLDB0:
+	.text
+.LHOTB0:
+	.p2align 4
+	.globl	_Z3barSt8functionIFivEE
+	.type	_Z3barSt8functionIFivEE, @function
+_Z3barSt8functionIFivEE:
+.LFB1946:
+	.cfi_startproc
+	cmpq	$0, 16(%rdi)
+	je	.L21
+	jmp	*24(%rdi)
+	.cfi_endproc
+	.section	.text.unlikely
+	.cfi_startproc
+	.type	_Z3barSt8functionIFivEE.cold, @function
+_Z3barSt8functionIFivEE.cold:
+.LFSB1946:
+.L21:
+	pushq	%rax
+	.cfi_def_cfa_offset 16
+	call	_ZSt25__throw_bad_function_callv
+	.cfi_endproc
+.LFE1946:
+	.text
+	.size	_Z3barSt8functionIFivEE, .-_Z3barSt8functionIFivEE
+	.section	.text.unlikely
+	.size	_Z3barSt8functionIFivEE.cold, .-_Z3barSt8functionIFivEE.cold
+.LCOLDE0:
+	.text
+.LHOTE0:
+	.section	.text.startup,"ax",@progbits
+	.p2align 4
+	.globl	main
+	.type	main, @function
+main:
+.LFB1947:
+	.cfi_startproc
+	subq	$56, %rsp
+	.cfi_def_cfa_offset 64
+	leaq	12(%rsp), %rax
+	leaq	8(%rsp), %rdx
+	movl	$10, 8(%rsp)
+	movq	%rax, %xmm1
+	movq	%rdx, %xmm0
+	leaq	16(%rsp), %rdi
+	movl	$10, 12(%rsp)
+	punpcklqdq	%xmm1, %xmm0
+	movaps	%xmm0, 16(%rsp)
+	movq	.LC1(%rip), %xmm0
+	movhps	.LC2(%rip), %xmm0
+	movaps	%xmm0, 32(%rsp)
+	call	_ZNSt14_Function_baseD2Ev
+	xorl	%eax, %eax
+	addq	$56, %rsp
+	.cfi_def_cfa_offset 8
+	ret
+	.cfi_endproc
+.LFE1947:
+	.size	main, .-main
+	.section	.rodata
+	.align 8
+	.type	_ZTIZ4mainEUlvE_, @object
+	.size	_ZTIZ4mainEUlvE_, 16
+_ZTIZ4mainEUlvE_:
+	.quad	_ZTVN10__cxxabiv117__class_type_infoE+16
+	.quad	_ZTSZ4mainEUlvE_
+	.align 8
+	.type	_ZTSZ4mainEUlvE_, @object
+	.size	_ZTSZ4mainEUlvE_, 14
+_ZTSZ4mainEUlvE_:
+	.string	"*Z4mainEUlvE_"
+	.section	.rodata.cst8,"aM",@progbits,8
+	.align 8
+.LC1:
+	.quad	_ZNSt17_Function_handlerIFivEZ4mainEUlvE_E10_M_managerERSt9_Any_dataRKS3_St18_Manager_operation
+	.align 8
+.LC2:
+	.quad	_ZNSt17_Function_handlerIFivEZ4mainEUlvE_E9_M_invokeERKSt9_Any_data
+	.globl	__gxx_personality_v0
+	.ident	"GCC: (GNU) 14.2.1 20250110 (Red Hat 14.2.1-7)"
+	.section	.note.GNU-stack,"",@progbits
